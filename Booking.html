@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Ballybay Petting Zoo</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" /> <!-- FullCalendar CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script> <!-- FullCalendar JS -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Zoo_Logo.jpg" alt="Logo" width="200">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Booking.html">Booking</a></li>
+                <li><a href="about_animal.html">About our animals</a></li>
+                <li><a href="Contact_Us.html">Contact us</a></li>
+                <li><a href="Merchandise.html">Merchandise</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-info">
+            <h1>Booking Information</h1>
+            <h2>Pricing</h2>
+            <div class="pricing">
+                <div class="price-box">
+                    <h3>General Admission</h3>
+                    <p>€10 per person</p>
+                </div>
+                <div class="price-box">
+                    <h3>Children (Under 12)</h3>
+                    <p>€5 per child</p>
+                </div>
+                <div class="price-box">
+                    <h3>Family Pass</h3>
+                    <p>€25 (2 adults + 2 children)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <h2>Select a Date</h2>
+            <div id="calendar"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ballybay Petting Zoo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: true,
+                events: [] // add events later yes yes
+            });
+        });
+    </script>
+</body>
+</html>
